@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.next.mapper.UsersMapper">
+  <resultMap id="BaseResultMap" type="com.next.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="mp_wx_open_id" jdbcType="VARCHAR" property="mpWxOpenId" />
+    <result column="app_qq_open_id" jdbcType="VARCHAR" property="appQqOpenId" />
+    <result column="app_wx_open_id" jdbcType="VARCHAR" property="appWxOpenId" />
+    <result column="app_weibo_uid" jdbcType="VARCHAR" property="appWeiboUid" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="birthday" jdbcType="VARCHAR" property="birthday" />
+    <result column="face_image" jdbcType="VARCHAR" property="faceImage" />
+    <result column="is_certified" jdbcType="INTEGER" property="isCertified" />
+    <result column="regist_time" jdbcType="TIMESTAMP" property="registTime" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.next.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="mp_wx_open_id" jdbcType="VARCHAR" property="mpWxOpenId" />
+    <result column="app_qq_open_id" jdbcType="VARCHAR" property="appQqOpenId" />
+    <result column="app_wx_open_id" jdbcType="VARCHAR" property="appWxOpenId" />
+    <result column="app_weibo_uid" jdbcType="VARCHAR" property="appWeiboUid" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="birthday" jdbcType="VARCHAR" property="birthday" />
+    <result column="face_image" jdbcType="VARCHAR" property="faceImage" />
+    <result column="is_certified" jdbcType="INTEGER" property="isCertified" />
+    <result column="regist_time" jdbcType="TIMESTAMP" property="registTime" />
+  </resultMap>
+</mapper>
