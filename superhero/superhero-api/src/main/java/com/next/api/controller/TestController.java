@@ -6,10 +6,21 @@ import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
 @ApiIgnore
-public class TestController {
+public class TestController extends BaseController{
 
     @GetMapping("test")
     public String test(){
         return "hello world";
+    }
+
+    @GetMapping("/redis/get")
+    public Object get(){
+        return redisOperator.get("key");
+    }
+
+    @GetMapping("/redis/set")
+    public String set(){
+        redisOperator.set("key","hello word");
+        return "success";
     }
 }

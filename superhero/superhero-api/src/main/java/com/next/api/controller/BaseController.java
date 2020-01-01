@@ -1,11 +1,16 @@
 package com.next.api.controller;
 
+import com.next.redis.RedisOperator;
 import org.apache.commons.lang3.ArrayUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
 public class BaseController {
+
+    @Autowired
+    RedisOperator redisOperator;
 
     public Integer[] getGuessULikeArray(Integer counts) {
 
