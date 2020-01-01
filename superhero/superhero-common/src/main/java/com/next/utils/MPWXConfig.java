@@ -2,6 +2,6 @@ package com.next.utils;
 
 public final class MPWXConfig {
 
-	public static final String APPID = "wx1b8762effcbdd70d";
-	public static final String SECRET = "f9c617dbb18e9ee465db8c2e18897686";
+	public static final String APPID = "wx1f992293f4ef7363";
+	public static final String SECRET = "c47998d044c77f2676e58eba1ff027a0";
 }
