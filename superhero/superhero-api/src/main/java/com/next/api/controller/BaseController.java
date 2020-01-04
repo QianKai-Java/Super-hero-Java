@@ -1,16 +1,23 @@
 package com.next.api.controller;
 
+import com.next.pojo.Users;
+import com.next.pojo.vo.UserVO;
 import com.next.redis.RedisOperator;
 import org.apache.commons.lang3.ArrayUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
+
+import java.util.UUID;
 
 @RestController
 public class BaseController {
 
     @Autowired
     RedisOperator redisOperator;
+
+    public final static String REDIS_USER_TOKEN = "redis_user_token";
 
     public Integer[] getGuessULikeArray(Integer counts) {
 
@@ -28,5 +35,17 @@ public class BaseController {
         }
 
         return guessIndexArray;
+    }
+
+    public UserVO setRedisUserToken(Users users){
+        String userId = users.getId();
+        String token = UUID.randomUUID().toString().trim();
+        redisOperator.set(REDIS_USER_TOKEN + ":" + userId, token);
+
+        UserVO userVO = new UserVO();
+        BeanUtils.copyProperties(users,userVO);
+        userVO.setToken(token);
+
+        return userVO;
     }
 }

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import tk.mybatis.spring.annotation.MapperScan;
 
 
-@SpringBootApplication(scanBasePackages = {"com.next"})
+@SpringBootApplication(scanBasePackages = {"com.next","org.n3r.idworker"})
 @MapperScan(basePackages = "com.next.mapper")
 public class Application {
     public static void main(String[] args){
