@@ -41,4 +41,10 @@ public interface UserService {
      * @return
      */
     Users saveUser(RegistLoginUserBo registLoginUserBo);
+
+    /**
+     * 修改用户信息
+     * @return
+     */
+    Users updateUserInfo(Users users);
 }

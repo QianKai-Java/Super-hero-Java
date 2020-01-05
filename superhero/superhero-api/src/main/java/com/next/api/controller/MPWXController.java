@@ -30,11 +30,6 @@ import java.util.UUID;
 public class MPWXController extends BaseController {
 
     @Autowired
-    private MovieService movieService;
-    @Autowired
-    private StaffService staffService;
-
-    @Autowired
     private UserService userService;
 
     @RequestMapping(value = "/mpWXLogin/{code}", method = RequestMethod.POST)

@@ -1,5 +1,6 @@
 package com.next.api.controller;
 
+import com.next.api.config.FaceConfig;
 import com.next.pojo.Users;
 import com.next.pojo.vo.UserVO;
 import com.next.redis.RedisOperator;
@@ -16,6 +17,9 @@ public class BaseController {
 
     @Autowired
     RedisOperator redisOperator;
+
+    @Autowired
+    FaceConfig faceConfig;
 
     public final static String REDIS_USER_TOKEN = "redis_user_token";
 
