@@ -5,6 +5,7 @@ import com.next.pojo.Users;
 import com.next.pojo.vo.UserVO;
 import com.next.redis.RedisOperator;
 import org.apache.commons.lang3.ArrayUtils;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +21,9 @@ public class BaseController {
 
     @Autowired
     FaceConfig faceConfig;
+
+    @Autowired
+    public RabbitTemplate rabbitTemplate;
 
     public final static String REDIS_USER_TOKEN = "redis_user_token";
 
